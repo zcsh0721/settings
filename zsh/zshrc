@@ -1,0 +1,25 @@
+
+# 使 copy 较长字符串到终端时, 无须等待
+ZSH_DISABLE_COMPFIX=true
+
+# oh-my-zsh 目录
+export ZSH="$HOME/.oh-my-zsh"
+
+# zsh 主题
+ZSH_THEME="amuse"
+
+# 解决贴中文乱码
+DISABLE_MAGIC_FUNCTIONS="true"
+
+# 历史命令 显示时间
+HIST_STAMPS="yyyy-mm-dd"
+
+# 插件
+plugins=(
+  git zsh-autosuggestions zsh-syntax-highlighting
+)
+
+
+
+source $ZSH/oh-my-zsh.sh
+source ~/.bash_profile
