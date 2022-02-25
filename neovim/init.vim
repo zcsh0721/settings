@@ -16,7 +16,7 @@ set ignorecase
 set smartcase
 
 
-# 键位修改
+" 键位修改
 noremap j h
 noremap i k
 noremap k j

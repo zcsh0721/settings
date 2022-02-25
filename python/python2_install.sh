@@ -1,5 +1,5 @@
-# python3
-python_version=3.8.12
+# python2
+python_version=2.7.18
 
 # 安装环境依赖
 yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel
@@ -12,8 +12,8 @@ wget "https://www.python.org/ftp/python/${python_version}/Python-${python_versio
 # 安装
 mv "Python-${python_version}.tgz" /usr/local/
 
-# 在local目录下创建Python3目录
-mkdir /usr/local/python3
+# 在local目录下创建Python2目录
+mkdir /usr/local/python2
 
 
 # 进入的Python安装包压缩包所在的目录
@@ -25,7 +25,7 @@ tar -xvf "Python-${python_version}.tgz"
 cd "/usr/local/Python-${python_version}/"
 
 # 配置安装目录
-./configure --prefix=/usr/local/python3
+./configure --prefix=/usr/local/python2
 
 # 编译源码
 make
@@ -34,19 +34,15 @@ make
 make install
 
 # 创建软连接
-ln -s /usr/local/python3/bin/python3  /usr/bin/python3
+ln -s /usr/local/python2/bin/python2 /usr/bin/python2
 
 # 删除安装包和目录
 rm -rf "/usr/local/Python-${python_version}"
 rm -rf "/usr/local/Python-${python_version}.tgz"
 
 
-#安装 pip3.8
-yum install -y python38-pip
-
-
-echo '创建 python 别名 -> python3'
-echo 'alias python=python3' >> ~/.zshrc
+#安装 pip2
+yum install -y python2-pip
 
 # 设置 pip 配置文件, 配置镜像
-wget  "https://raw.githubusercontent.com/zcsh0721/settings/main/python/pip.conf" -O ~/.pip3/pip.conf
+wget  "https://raw.githubusercontent.com/zcsh0721/settings/main/python/pip.conf" -O ~/.pip2/pip.conf
