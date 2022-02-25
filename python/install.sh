@@ -1,3 +1,4 @@
+# python3
 python_version=3.8.12
 
 # 安装环境依赖
@@ -44,5 +45,4 @@ rm -rf "/usr/local/Python-${python_version}.tgz"
 yum install -y python38-pip
 
 # 设置 pip 配置文件, 配置镜像
-mkdir ~/.pip3
 wget  "https://raw.githubusercontent.com/zcsh0721/settings/main/python/pip.conf" -O ~/.pip3/pip.conf

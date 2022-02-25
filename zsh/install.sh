@@ -1,3 +1,4 @@
+# centos
 # 安装 zsh
 yum install -y zsh
 chsh -s /bin/zsh
